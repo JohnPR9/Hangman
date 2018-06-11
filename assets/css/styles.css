@@ -1,0 +1,17 @@
+* {
+    
+}
+h1 {
+    position:relative;
+    text-align: center;
+    color:blue;
+    border:5px solid;
+    width:300px;
+    padding:0px;
+    margin:0px;
+}
+#instruct {
+    height: 200px;
+    width: 500px;
+    color:black;
+}

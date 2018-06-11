@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css"></link>
+
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>Hangman</h1>
+    </div>
+  </header>
+
+  <div class="container" id="instruct">
+    <p>You will be presented with a series of blanks that represent a word that you must guess. You will only be given a limited
+      number of guesses. If there is more than one letter they will both be populated automatically. All incorrect guesses
+      will be listed. You will only be allowed to guess each for letter once.</p>
+  </div>
+
+  
+
+  <div>
+      User Guess:<input type="text" value"uGuess"
+      maxlength=1 id="guess" onfocus="this.value=''"> 
+      <button id="submit" onclick="testingWord(passing,uGuess)"> Submit </button>
+      <p>Correct Guesses</p>
+      <p id="output"></p>
+      <p>Wrong Guesses</p>
+      <p id="wrong"></p>
+      <p>You have 15 guesses to figure out the correct word.</p>
+      <p id="number">Guesses left.</p>
+      <p></p>
+      <p id="wins">Wins</p>
+  </div>
+
+  <script type="text/javascript" src="assets/js/index.js"></script>
+</body>
+
+</html>
