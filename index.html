@@ -2,44 +2,70 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
+
+  <title>Hangman</title>
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css"></link>
 
+
 </head>
 
 <body>
   <header>
-    <div>
-      <h1>Hangman</h1>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container-fluid">
+        <h1 class="display-4">Hangman</h1>
+      </div>
     </div>
   </header>
 
   <div class="container" id="instruct">
     <p>You will be presented with a series of blanks that represent a word that you must guess. You will only be given a limited
       number of guesses. If there is more than one letter they will both be populated automatically. All incorrect guesses
-      will be listed. You will only be allowed to guess each for letter once.</p>
+      will be listed.</p>
   </div>
 
-  
+  <hr>
 
-  <div>
-      User Guess:<input type="text" value"uGuess"
-      maxlength=1 id="guess" onfocus="this.value=''"> 
-      <button id="submit" onclick="testingWord(passing,uGuess)"> Submit </button>
-      <p>Correct Guesses</p>
-      <p id="output"></p>
-      <p>Wrong Guesses</p>
-      <p id="wrong"></p>
-      <p>You have 15 guesses to figure out the correct word.</p>
-      <p id="number">Guesses left.</p>
-      <p></p>
-      <p id="wins">Wins</p>
+
+  <div class="container" id="input">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 work">
+        <div>
+          <p>User Guess:</p>
+        </div>
+        <input type="text" value "uGuess" maxlength=1 id="guess" onfocus="this.value=''">
+        <button id="submit" onclick="testingWord(passing,uGuess)"> Submit </button>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 work">
+        <p>Correct Letters Guessed</p>
+        <p id="output"></p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 work">
+        <p>Incorrect Letters Guessed</p>
+        <p id="wrong"></p>
+      </div>
+    </div>
   </div>
+
+  <p>You have 15 guesses to figure out the correct word.</p>
+  <p id="number">Guesses left.</p>
+  <p></p>
+  <p id="wins">Wins</p>
+
+
 
   <script type="text/javascript" src="assets/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
